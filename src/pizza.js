@@ -1,6 +1,13 @@
 // Write your Pizza Builder JavaScript in this file.
 var price = 13;
 
+$('document').on('ready', function(){
+  $('.crust').toggleClass('crust-gluten-free');
+  $('.sauce').toggleClass('sauce-white');
+  $('.btn-sauce').toggleClass('active');
+  $('.btn-crust').toggleClass('active');
+})
+
 function changePrice(e, suplemento){
   if(e.currentTarget.className.indexOf('active') > -1){
     price += suplemento
